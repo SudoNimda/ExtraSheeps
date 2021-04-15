@@ -24,7 +24,6 @@ public class main extends JavaPlugin {
     public static int tnt_power = 0;
     public static int tnt_cooldown = 0;
     public static List colors;
-    public static boolean same = true;
     public static double same_chance = 0.0;
 
     @Override
@@ -56,19 +55,21 @@ public class main extends JavaPlugin {
     public void read_config(){
         tnt_power = getCustomConfig().getInt("tnt.power");
         tnt_cooldown = getCustomConfig().getInt("tnt.cooldown");
-
-        same = getCustomConfig().getBoolean("chance.same");
-        same_chance = getCustomConfig().getDouble("chance.same_chance");
-        colors = getCustomConfig().getDoubleList("chance.colors");
+        if (!same_chance) //if chances are set separately
+        {
+          colors = getCustomConfig().getDoubleList("chance.colors");
+        }else{ //load all colors from value of chance_same
+          same = getCustomConfig().getBoolean("chance.same_chance");
+        }
     }
 
 
     public static void sheep(PlayerShearEntityEvent event, Sheep sheep) {
         double get_chance = 0;
 
-        if (same) {
+        if (same_chance) {
             get_chance = same_chance;
-        } else if (!same) {
+        } else{
             switch (sheep.getColor().toString().toLowerCase()) {
                 case "white":      get_chance = ((double) colors.get(0)); break;
                 case "orange":     get_chance = ((double) colors.get(1)); break;
