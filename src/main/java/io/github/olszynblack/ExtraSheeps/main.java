@@ -70,60 +70,23 @@ public class main extends JavaPlugin {
             get_chance = same_chance;
         } else if (!same) {
             switch (sheep.getColor().toString().toLowerCase()) {
-                case "white":
-                    get_chance = ((double) colors.get(0));
-                    break;
-                case "orange":
-                    get_chance = ((double) colors.get(1));
-                    break;
-                case "magenta":
-                    get_chance = ((double) colors.get(2));
-                    break;
-                case "light_blue":
-                    get_chance = ((double) colors.get(3));
-                    break;
-
-                case "yellow":
-                    get_chance = ((double) colors.get(4));
-                    break;
-                case "lime":
-                    get_chance = ((double) colors.get(5));
-                    break;
-                case "pink":
-                    get_chance = ((double) colors.get(6));
-                    break;
-                case "gray":
-                    get_chance = ((double) colors.get(7));
-                    break;
-
-                case "light_gray":
-                    get_chance = ((double) colors.get(8));
-                    break;
-                case "cyan":
-                    get_chance = ((double) colors.get(9));
-                    break;
-                case "purple":
-                    get_chance = ((double) colors.get(10));
-                    break;
-                case "blue":
-                    get_chance = ((double) colors.get(11));
-                    break;
-
-                case "brown":
-                    get_chance = ((double) colors.get(12));
-                    break;
-                case "green":
-                    get_chance = ((double) colors.get(13));
-                    break;
-                case "red":
-                    get_chance = ((double) colors.get(14));
-                    break;
-                case "black":
-                    get_chance = ((double) colors.get(15));
-                    break;
-
-                default:
-                    break;
+                case "white":      get_chance = ((double) colors.get(0)); break;
+                case "orange":     get_chance = ((double) colors.get(1)); break;
+                case "magenta":    get_chance = ((double) colors.get(2)); break;
+                case "light_blue": get_chance = ((double) colors.get(3)); break;
+                case "yellow":     get_chance = ((double) colors.get(4)); break;
+                case "lime":       get_chance = ((double) colors.get(5)); break;
+                case "pink":       get_chance = ((double) colors.get(6)); break;
+                case "gray":       get_chance = ((double) colors.get(7)); break;
+                case "light_gray": get_chance = ((double) colors.get(8)); break;
+                case "cyan":       get_chance = ((double) colors.get(9)); break;
+                case "purple":     get_chance = ((double) colors.get(10)); break;
+                case "blue":       get_chance = ((double) colors.get(11)); break;
+                case "brown":      get_chance = ((double) colors.get(12)); break;
+                case "green":      get_chance = ((double) colors.get(13)); break;
+                case "red":        get_chance = ((double) colors.get(14)); break;
+                case "black":      get_chance = ((double) colors.get(15)); break;
+                default: break;
             }
         }
 
