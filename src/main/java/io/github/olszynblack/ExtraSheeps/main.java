@@ -32,11 +32,9 @@ public class main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new listener(), this);
         createCustomConfig();
         read_config();
-        //getLogger().info("onEnable is called!");
     }
     @Override
     public void onDisable() {
-        //getLogger().info("onDisable is called!");
     }
 
 

@@ -12,7 +12,6 @@ public class listener implements Listener {
     @EventHandler
     public void shearsEvent(PlayerShearEntityEvent event) {
         if (event.getEntity().getType() == EntityType.SHEEP){
-            Player player = event.getPlayer();
             Sheep sheep = ((Sheep) event.getEntity());
             main.sheep(event, sheep);
         }
